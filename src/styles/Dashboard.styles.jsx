@@ -1,9 +1,6 @@
 import styled from "styled-components"
 
 export const DashBoardContainer = styled.div`
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem;
   min-height: 100vh;
   width: 100%;
   font-family: 'Open Sans';
