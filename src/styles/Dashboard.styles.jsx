@@ -6,7 +6,9 @@ export const DashBoardContainer = styled.div`
   padding-bottom: 1rem;
   min-height: 100vh;
   width: 100%;
-  font-family: 'Open Sans'
+  font-family: 'Open Sans';
+  background: rgb(0,212,255);
+background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(255,255,255,0) 17%);
 `
 export const ColorTitleDiv = styled.div`
   font-size: 22px;
@@ -73,7 +75,7 @@ export const TitleDiv = styled.div`
   text-align: center;
   font-size: 40px;
   width: 100%;
-  margin-bottom: 145px;
+  margin-bottom: 133px;
 `
 
 export const LyricsContainer = styled.div`

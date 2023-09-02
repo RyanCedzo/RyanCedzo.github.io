@@ -52,6 +52,7 @@ const Dashboard = ({ code }) => {
   const [button5Color, setButton5Color] = useState("#808080");
   const [button6Color, setButton6Color] = useState("#808080");
   const [button7Color, setButton7Color] = useState("#808080");
+  const [colorList, setColorList] = useState([]);
   const [bannerColor, setBannerColor] = useState("black");
   const [isDisabled, setIsDisabled] = useState(false);
   const [currentButton, setCurrentButton] = useState(0);
@@ -395,6 +396,7 @@ const Dashboard = ({ code }) => {
     if(button6Color != "#808080"){
       preColorList.push(button6Color);
     }
+    setColorList(preColorList);
     setOptions({
       colors: preColorList,
       fontSizes: [18,92],
@@ -505,6 +507,7 @@ const Dashboard = ({ code }) => {
   const backgroundImage3 = 'url(' + require('./backgrounds/efe-kurnaz-RnCPiXixooY-unsplash.jpg') + ')' //neon
   const backgroundImage4 = 'url(' + require('./backgrounds/iccup-xNtwmcRP-gw-unsplash.jpg') + ')'
   const backgroundImage5 = 'url(' + require('./backgrounds/PXL_20230705_225431505.jpg') + ')'
+  const dashboardBackground1 = 'url(' + require('./backgrounds/cloudBackground1.jpg') + ')'
 
 
   const cardStyle = {
@@ -550,6 +553,7 @@ const Dashboard = ({ code }) => {
     marginBottom: -54, 
     padding: 4, 
     marginTop: 62, 
+    textAlign: "center",
     //background: button7Color, 
     borderRadius: 12,
     fontFamily: "AlphaSmoke",
@@ -566,8 +570,8 @@ const Dashboard = ({ code }) => {
   }
 
   return (
-    <DashBoardContainer>
-      <TitleDiv>
+    <DashBoardContainer style={{backgroundImage: dashboardBackground1, backgroundSize: 'cover'}}>
+      <TitleDiv style={{fontFamily: "AlphaSmoke", fontWeight: 'bold'}}>
         <p>Lyrify</p>
       </TitleDiv>
       <TopContainer>
@@ -632,16 +636,16 @@ const Dashboard = ({ code }) => {
           <Card.Title style={{marginTop: -12, marginBottom: 3, marginRight: 5, marginLeft: 5}}>Metrics</Card.Title>
           <Card.Text>
             <div style={{marginBottom: 5, marginRight: 5, marginLeft: 5, borderColor: 'black', borderWidth: 1}}>
-              <ProgressBar completed={avgPop} bgColor={button1Color} labelAlignment="left" height="25px" labelColor={pickTextColor(button1Color)} style={{marginBottom: 5}} customLabel="Popularity" transitionDuration="5s" animateOnRender={true} className="barClass"/>
+              <ProgressBar completed={avgPop} bgColor={colorList[1 % colorList.length]} labelAlignment="left" height="25px" labelColor={pickTextColor(button1Color)} style={{marginBottom: 5}} customLabel="Popularity" transitionDuration="5s" animateOnRender={true} className="barClass"/>
             </div>
             <div style={{marginBottom: 5, marginRight: 5, marginLeft: 5, borderColor: 'black', borderWidth: 1}}>
-              <ProgressBar completed={avgEnergy} bgColor={button2Color} labelAlignment="left" height="25px" labelColor={pickTextColor(button2Color)} style={{marginBottom: 5}} customLabel="Energy" transitionDuration="5s" animateOnRender={true} className="barClass"/>
+              <ProgressBar completed={avgEnergy} bgColor={colorList[2 % colorList.length]} labelAlignment="left" height="25px" labelColor={pickTextColor(button2Color)} style={{marginBottom: 5}} customLabel="Energy" transitionDuration="5s" animateOnRender={true} className="barClass"/>
             </div>
             <div style={{marginBottom: 5, marginRight: 5, marginLeft: 5, borderColor: 'black', borderWidth: 1}}>
-              <ProgressBar completed={avgValence} bgColor={button3Color} labelAlignment="left" height="25px" labelColor={pickTextColor(button3Color)} style={{marginBottom: 5}} customLabel="Valence" transitionDuration="5s" animateOnRender={true} className="barClass"/>
+              <ProgressBar completed={avgValence} bgColor={colorList[3 % colorList.length]} labelAlignment="left" height="25px" labelColor={pickTextColor(button3Color)} style={{marginBottom: 5}} customLabel="Valence" transitionDuration="5s" animateOnRender={true} className="barClass"/>
             </div>
             <div style={{marginBottom: 5, marginRight: 5, marginLeft: 5, borderColor: 'black', borderWidth: 1}}>
-              <ProgressBar completed={avgDance} bgColor={button4Color} labelAlignment="left" height="25px" labelColor={pickTextColor(button4Color)} style={{marginBottom: 5}} customLabel="Danceability" transitionDuration="5s" animateOnRender={true} className="barClass"/>
+              <ProgressBar completed={avgDance} bgColor={colorList[4 % colorList.length]} labelAlignment="left" height="25px" labelColor={pickTextColor(button4Color)} style={{marginBottom: 5}} customLabel="Danceability" transitionDuration="5s" animateOnRender={true} className="barClass"/>
             </div>
           </Card.Text>
         </Card.Body>
