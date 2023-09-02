@@ -623,7 +623,8 @@ const Dashboard = ({ code }) => {
       }
       {finishWords
         ?
-        <div id='table-container'>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <div id='table-container'>
           <Card className="text-left" style={cardStyle}>
           <Card.Title style={normalCard}>{username}'s <br></br>Lyrify Cloud</Card.Title>
           <LyricsContainer ref={cloudDivRef}>
@@ -651,6 +652,8 @@ const Dashboard = ({ code }) => {
         </Card.Body>
       </Card>
       </div>
+      </div>
+        
         // <LyricsContainer id="table-container" ref={cloudDivRef}>
         //     <TopDiv style={{backgroundColor: lightenHexColor(button7Color)}}>{username}'s Lyrify Cloud</TopDiv>
         //     <ReactWordcloud style={wordCloudStyle} words={words} options={options} size={size}></ReactWordcloud>
