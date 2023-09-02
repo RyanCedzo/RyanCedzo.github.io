@@ -1,11 +1,14 @@
 import styled from "styled-components"
 
 export const DashBoardContainer = styled.div`
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
   min-height: 100vh;
   width: 100%;
   font-family: 'Open Sans';
   background: rgb(0,212,255);
-background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(255,255,255,0) 17%);
+  background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(255,255,255,0) 17%);
 `
 export const ColorTitleDiv = styled.div`
   font-size: 22px;
