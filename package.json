@@ -20,6 +20,8 @@
     "react-icons": "^4.10.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",
+    "react-slideshow-image": "^4.3.0",
+    "react-sound": "^1.2.0",
     "react-wordcloud": "^1.2.7",
     "spotify-web-api-node": "^5.0.2",
     "styled-components": "^6.0.7",

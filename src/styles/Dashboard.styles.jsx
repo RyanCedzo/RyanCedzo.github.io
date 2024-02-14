@@ -76,6 +76,7 @@ export const TitleDiv = styled.div`
   font-size: 40px;
   width: 100%;
   margin-bottom: 133px;
+  margin-top: 30px;
 `
 
 export const LyricsContainer = styled.div`
