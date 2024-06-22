@@ -1,3 +1,11 @@
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
 /**
  * @license React
  * react-dom.production.min.js
@@ -38,15 +46,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license
+/** @license React v16.13.1
+ * react-is.production.min.js
  *
- * SoundManager 2: JavaScript Sound for the Web
- * ----------------------------------------------
- * http://schillmania.com/projects/soundmanager2/
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
- * Copyright (c) 2007, Scott Schiller. All rights reserved.
- * Code provided under the BSD License:
- * http://schillmania.com/projects/soundmanager2/license.txt
- *
- * V2.97a.20170601
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
